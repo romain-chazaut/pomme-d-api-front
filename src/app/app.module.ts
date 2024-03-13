@@ -8,6 +8,8 @@ import { HomePageComponent } from './products/home-page/home-page.component';
 import { ProfileComponent } from './user-profile/profile/profile.component';
 import { RouterModule, Routes } from '@angular/router'; 
 import { AppRoutingModule } from './app-routing.module';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     HomePageComponent,
     ProfileComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

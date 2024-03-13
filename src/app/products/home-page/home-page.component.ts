@@ -7,7 +7,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
-  constructor(private router: Router) {}
+  products: any[] = [];
+
+  constructor(private router: Router) {
+    // Générer 30 produits
+    for (let i = 1; i <= 30; i++) {
+      this.products.push({
+        id: i,
+        name: `Produit ${i}`,
+        description: `Description du Produit ${i}`,
+        price: Math.round(Math.random() * 100) + 10 // Prix aléatoire entre 10 et 110
+      });
+    }
+  }
 
   navigateToLogin() {
     console.log('Connexion demandée');

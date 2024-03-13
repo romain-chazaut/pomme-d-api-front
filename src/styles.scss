@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .site-container {
+    min-height: 100vh; /* Utilisez 100% de la hauteur de la vue */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-container {
+    flex: 1; /* Permet au contenu de s'étendre et de pousser le footer vers le bas */
+  }
+  
+  /* Assurez-vous que le CSS de votre navbar et footer est correctement configuré */
+  

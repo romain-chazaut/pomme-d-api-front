@@ -1,0 +1,54 @@
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    h1, h2 {
+      color: #333;
+    }
+  
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+  
+      button {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s;
+  
+        &:hover {
+          background-color: darken(#007bff, 10%);
+        }
+      }
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+  
+      th, td {
+        text-align: left;
+        padding: 0.75rem;
+        border-bottom: 1px solid #ddd;
+      }
+  
+      th {
+        background-color: #f8f8f8;
+      }
+  
+      tr:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+  
