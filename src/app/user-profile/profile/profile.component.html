@@ -1,1 +1,18 @@
-<p>profile works!</p>
+<div class="profile">
+    <h1>Profil Utilisateur</h1>
+    <div *ngIf="!isEditing; else editMode">
+        <h2>{{ profileData.name }}</h2>
+        <p>Email: {{ profileData.email }}</p>
+        <p>Location: {{ profileData.location }}</p>
+        <button (click)="startEditing()">Modifier le Profil</button>
+        <button (click)="navigateToHome()">Retour à l'accueil</button>
+    </div>
+    <ng-template #editMode>
+        <input type="text" [(ngModel)]="profileData.name" placeholder="Nom">
+        <input type="email" [(ngModel)]="profileData.email" placeholder="Email">
+        <input type="text" [(ngModel)]="profileData.location" placeholder="Location">
+        <button (click)="saveChanges()">Sauvegarder</button>
+        <button (click)="cancelEditing()">Annuler</button>
+        <button (click)="deleteProfile()">Supprimer le Profil</button>
+    </ng-template>
+</div>
