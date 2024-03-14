@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,31 +8,45 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent {
   products: any[] = [];
+  selectedProduct: any = null;
+  isModalVisible: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private cdr: ChangeDetectorRef) {
     // Générer 30 produits
     for (let i = 1; i <= 30; i++) {
       this.products.push({
         id: i,
         name: `Produit ${i}`,
         description: `Description du Produit ${i}`,
-        price: Math.round(Math.random() * 100) + 10 // Prix aléatoire entre 10 et 110
+        price: Math.round(Math.random() * 100) + 10
       });
     }
   }
 
   navigateToLogin() {
-    console.log('Connexion demandée');
     this.router.navigate(['/login']);
   }
 
   navigateToRegister() {
-    console.log('Inscription demandée');
     this.router.navigate(['/register']);
   }
 
   navigateToProfile() {
-    console.log('Profil demandé');
     this.router.navigate(['/profile']);
+  }
+
+  openProductModal(product: any) {
+    console.log('Ouverture de la modal avec le produit :', product);
+    this.selectedProduct = product;
+    this.isModalVisible = true;
+    this.cdr.detectChanges(); // Force la détection de changements après la mise à jour
+    console.log('Modal should be visible now');
+  }
+
+  closeModal() {
+    this.isModalVisible = false;
+    this.selectedProduct = null;
+    this.cdr.detectChanges(); // Optionnel ici, surtout si la fermeture de la modal ne change pas d'autres données
+    console.log('Modal should be hidden now');
   }
 }

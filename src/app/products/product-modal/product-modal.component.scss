@@ -1,0 +1,53 @@
+.product-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex; /* Utilise Flexbox pour le centrage */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Supprimez la marge pour le centrage Flexbox */
+}
+
+h2, p, ul {
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin: 5px 0;
+  }
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute; /* Position absolue par rapport à modal-content */
+  top: 10px; /* Ajustez selon les besoins */
+  right: 15px; /* Ajustez selon les besoins */
+  font-size: 28px;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

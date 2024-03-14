@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Ajoutez cette ligne
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './auth/register/register.component'; 
 import { LoginComponent } from './auth/login/login.component';
 import { HomePageComponent } from './products/home-page/home-page.component';
+import { ProductModalComponent } from './products/product-modal/product-modal.component';
 import { ProfileComponent } from './user-profile/profile/profile.component';
 import { RouterModule, Routes } from '@angular/router'; 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,14 +21,14 @@ import { FooterComponent } from './shared/footer/footer.component';
     HomePageComponent,
     ProfileComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ProductModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule, 
     RouterModule,
-    AppRoutingModule// Ajoutez FormsModule ici
-    // autres modules importés
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

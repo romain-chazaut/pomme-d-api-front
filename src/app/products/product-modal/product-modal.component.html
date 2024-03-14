@@ -1,1 +1,14 @@
-<p>product-modal works!</p>
+<!-- product-modal.component.html -->
+<div class="modal" *ngIf="isVisible">
+    <div class="modal-content">
+      <span class="close-button" (click)="closeModal()">&times;</span>
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <ul>
+        <li>Prix: {{ product.price }}€</li>
+        <li>Catégorie: {{ product.category }}</li>
+        <!-- Ajoutez d'autres détails du produit ici -->
+      </ul>
+    </div>
+  </div>
+  

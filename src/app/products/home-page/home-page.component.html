@@ -13,6 +13,7 @@
                 <th>Nom</th>
                 <th>Description</th>
                 <th>Prix</th>
+                <th>Actions</th> <!-- Ajout d'une colonne pour les actions -->
             </tr>
         </thead>
         <tbody>
@@ -21,7 +22,13 @@
                 <td>{{ product.name }}</td>
                 <td>{{ product.description }}</td>
                 <td>{{ product.price }} €</td>
+                <td>
+                    <!-- Bouton pour ouvrir la modal de détails du produit -->
+                    <button (click)="openProductModal(product)">Voir les détails</button>
+                </td>
             </tr>
         </tbody>
     </table>
+    <!-- Modal pour afficher les détails du produit -->
+    <app-product-modal *ngIf="isModalVisible" [product]="selectedProduct" (close)="closeModal()"></app-product-modal>
 </div>
