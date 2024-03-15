@@ -1,3 +1,4 @@
+/* Styles globaux pour la modal */
 .product-modal {
   position: fixed;
   z-index: 1000;
@@ -6,25 +7,26 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  display: flex; /* Utilise Flexbox pour le centrage */
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
-  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
 }
 
+/* Styles pour le contenu de la modal */
 .modal-content {
   background-color: #fefefe;
-  padding: 20px;
+  padding: 80px;
   border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
+  width: auto; /* Permet au contenu de définir la largeur, ajustez selon le contenu */
+  max-width: 500px; /* Taille réduite pour la modal */
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Supprimez la marge pour le centrage Flexbox */
 }
 
+/* Styles pour les titres, paragraphes, et listes à l'intérieur de la modal */
 h2, p, ul {
-  margin: 10px 0;
+  margin: 30px 0;
 }
 
 ul {
@@ -36,9 +38,10 @@ ul {
   }
 }
 
+/* Styles pour le bouton de fermeture de la modal */
 .close-button {
-  color: #aaa;
-  position: absolute; /* Position absolue par rapport à modal-content */
+  color: #c64343;
+  position: relative; /* Position absolue par rapport à modal-content */
   top: 10px; /* Ajustez selon les besoins */
   right: 15px; /* Ajustez selon les besoins */
   font-size: 28px;
